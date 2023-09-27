@@ -1,0 +1,20 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(
+            varPrimaryColor,
+            Color.Yellow
+        );
+        Set(
+            varTextColor,
+            Color.Black
+        )
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

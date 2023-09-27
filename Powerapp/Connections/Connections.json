@@ -1,0 +1,164 @@
+{
+  "0733b7dc-5642-40d2-9335-23b76e7445fa": {
+    "appActions": [
+      "Manager"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/partial-builds/ase-v3/1.0.1653.3402/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0733b7dc-5642-40d2-9335-23b76e7445fa"
+  },
+  "1aff2b26-726b-4862-8dcb-d7f2e32d3b39": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "aa747475-74d9-4c3c-b18d-330933448701": {
+          "value": "shared_office365"
+        },
+        "cb8eb62d-5015-45c2-abf0-dee2cf4641e4": {
+          "value": "shared_msnweather"
+        },
+        "workflowEntityId": {
+          "value": "8ad62d27-9557-ee11-be6f-000d3a4ae085"
+        },
+        "workflowName": {
+          "value": "a484ac77-aa92-b861-8ac2-153be50cc0b3"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_msnweather": {
+          "value": "cb8eb62d-5015-45c2-abf0-dee2cf4641e4"
+        },
+        "shared_office365": {
+          "value": "aa747475-74d9-4c3c-b18d-330933448701"
+        },
+        "workflowEntityId": {
+          "value": "8ad62d27-9557-ee11-be6f-000d3a4ae085"
+        },
+        "workflowName": {
+          "value": "a484ac77-aa92-b861-8ac2-153be50cc0b3"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Returntosender"
+    ],
+    "dependencies": {
+      "shared_msnweather": "cb8eb62d-5015-45c2-abf0-dee2cf4641e4",
+      "shared_office365": "aa747475-74d9-4c3c-b18d-330933448701"
+    },
+    "dependents": [],
+    "id": "1aff2b26-726b-4862-8dcb-d7f2e32d3b39"
+  },
+  "aa747475-74d9-4c3c-b18d-330933448701": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/partial-builds/ase-v3/1.0.1653.3402/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "1aff2b26-726b-4862-8dcb-d7f2e32d3b39",
+      "ebedca8c-5cd9-4d8d-bda6-3031d0a9a45d"
+    ],
+    "id": "aa747475-74d9-4c3c-b18d-330933448701"
+  },
+  "cb8eb62d-5015-45c2-abf0-dee2cf4641e4": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "MSN Weather",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/jayawan/releases/v1.0.1655/1.0.1655.3424/msnweather/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_msnweather",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "1aff2b26-726b-4862-8dcb-d7f2e32d3b39"
+    ],
+    "id": "cb8eb62d-5015-45c2-abf0-dee2cf4641e4"
+  },
+  "e155112d-2043-47cb-9d08-afbaa579bb21": {
+    "connectionRef": {
+      "displayName": "Spatial Services",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1613/1.0.1613.3125/microsoftspatialservices/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_microsoftspatialservices"
+    },
+    "datasets": {},
+    "dataSources": [
+      "SpatialServices"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e155112d-2043-47cb-9d08-afbaa579bb21"
+  },
+  "ebedca8c-5cd9-4d8d-bda6-3031d0a9a45d": {
+    "appActions": [
+      "Run"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "aa747475-74d9-4c3c-b18d-330933448701": {
+          "value": "shared_office365"
+        },
+        "workflowEntityId": {
+          "value": "c64d07bb-ff4a-ee11-be6f-000d3a4ae085"
+        },
+        "workflowName": {
+          "value": "48ea732c-12e8-84da-4f34-675a3234d34a"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "aa747475-74d9-4c3c-b18d-330933448701"
+        },
+        "workflowEntityId": {
+          "value": "c64d07bb-ff4a-ee11-be6f-000d3a4ae085"
+        },
+        "workflowName": {
+          "value": "48ea732c-12e8-84da-4f34-675a3234d34a"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Triggerfromapp"
+    ],
+    "dependencies": {
+      "shared_office365": "aa747475-74d9-4c3c-b18d-330933448701"
+    },
+    "dependents": [],
+    "id": "ebedca8c-5cd9-4d8d-bda6-3031d0a9a45d"
+  }
+}

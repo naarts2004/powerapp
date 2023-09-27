@@ -1,0 +1,107 @@
+"Containers As screen.'autoLayout_Sidebar_ver1.0'":
+
+    layMain As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        layLine3 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =1
+
+            layLine4 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =1
+
+                layLine3_2 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    con1_2 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(0, 0, 0, 1)
+                        Height: =Parent.Height
+                        LayoutMinHeight: =50  
+                        LayoutMinWidth: =250
+                        ZIndex: =1
+
+                    con2_2 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(54, 176, 75, 1)
+                        FillPortions: =0
+                        Height: =Parent.Height
+                        LayoutMinHeight: =Parent.Height
+                        LayoutMinWidth: =200
+                        Width: =100
+                        ZIndex: =2
+
+                con1_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(255, 191, 0, 1)
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                con2_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Fill: =RGBA(39, 113, 194, 1)
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+        layLine1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =2
+
+            con1 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(184, 0, 0, 1)
+                LayoutMinHeight: =100
+                LayoutMinWidth: =200
+                ZIndex: =1
+
+            con2 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(152, 208, 70, 1)
+                LayoutMinHeight: =100
+                LayoutMinWidth: =200
+                ZIndex: =2
+
+            con3 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(109, 49, 162, 1)
+                LayoutMinHeight: =100
+                LayoutMinWidth: =200
+                Width: =100
+                ZIndex: =3
+
+        layLine2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(255, 255, 0, 1)
+            Height: =Parent.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =3
+

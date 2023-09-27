@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "b53b4581-df66-4f35-87e1-2ae16b3694c0",
+    "Name": "Returntosender",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "8ad62d27-9557-ee11-be6f-000d3a4ae085"
+  }
+]

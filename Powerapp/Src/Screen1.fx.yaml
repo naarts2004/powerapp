@@ -1,0 +1,66 @@
+"Screen1 As screen.'autoLayout_SplitScreen_ver1.0'":
+
+    ScreenContainer6 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        LeftContainer3 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =2
+
+            txtEmail As text:
+                BorderColor: =If(IsMatch(txtEmail.Text,Match.Email), Color.Blue, Color.Red)
+                Default: ="Text input"
+                ZIndex: =1
+
+            Button1 As button:
+                OnSelect: =Set(varUser, Office365Users.Manager(txtEmail.Text))
+                Text: ="Button"
+                ZIndex: =2
+
+            txtDepartment As text:
+                Default: ="Text input"
+                ZIndex: =3
+
+        RightContainer3 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =3
+
+            Label4 As label:
+                Text: =
+                ZIndex: =1
+
+            Label5 As label:
+                Text: =IsMatch(txtEmail.Text,Match.Email)
+                ZIndex: =2
+
+            Label6 As label:
+                Text: =User().Email
+                ZIndex: =3
+

@@ -1,0 +1,129 @@
+"Variables As screen.'autoLayout_SplitScreen_ver1.0'":
+    OnVisible: =
+
+    ScreenContainer4 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        LeftContainer4 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =2
+
+            btnReset As button:
+                OnSelect: |-
+                    =Set(varGlobal, Blank()); UpdateContext({locScreen: Blank()})
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Reset"
+                Width: =Parent.Width
+                ZIndex: =1
+
+            btnGlobaal As button:
+                OnSelect: =Set(varGlobal, "Globale variabele");
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Globaal"
+                Width: =Parent.Width
+                ZIndex: =2
+
+            btnScherm As button:
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            locScreen: "Scherm variabele"
+                        
+                        }
+                    )
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Scherm"
+                Width: =Parent.Width
+                ZIndex: =3
+
+            btnFunctie As button:
+                OnSelect: |
+                    =/*With(
+                        {locFunctie: "Functie variabele"},
+                        Notify(
+                            locFunctie,
+                            NotificationType.Information,
+                            2000
+                        )
+                    )*/
+                    With(
+                        {locMessage: "dit is een message"},
+                        Notify(
+                            locMessage,
+                            NotificationType.Information,
+                            2000
+                        )
+                    );
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Text: ="Functie"
+                Width: =Parent.Width
+                ZIndex: =4
+
+            btnNavigate As button:
+                OnSelect: |-
+                    =Navigate(Flow, ScreenTransition.Cover, {locNaarScherm: "dit gaat mee naar een volgend scherm"})
+                Text: ="Navigate"
+                Width: =Parent.Width
+                X: =78
+                Y: =364
+                ZIndex: =5
+
+        RightContainer4 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =3
+
+            lblGlobaal As label:
+                Text: =varGlobal
+                Width: =Parent.Width
+                ZIndex: =1
+
+            lblScherm As label:
+                Text: =locScreen
+                Width: =Parent.Width
+                ZIndex: =2
+
+            lblFunctie As label:
+                Text: =locFunctie
+                Width: =Parent.Width
+                ZIndex: =3
+

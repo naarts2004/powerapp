@@ -1,0 +1,78 @@
+"'Location screen' As screen.'autoLayout_SplitScreen_ver1.0'":
+
+    ScreenContainer2 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        LayoutWrap: =true
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        LeftContainer2 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =2
+
+            lblLatitude As label:
+                Text: =Location.Latitude
+                ZIndex: =1
+
+            lblLongitude As label:
+                Text: =Location.Longitude
+                ZIndex: =2
+
+            lblAltitude As label:
+                Text: =Location.Altitude
+                ZIndex: =3
+
+        RightContainer2 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            ZIndex: =3
+
+            "mapBing As 'Map (preview)'.pcfdataset":
+                BorderColor: =RGBA(0, 18, 107, 1)
+                CurrentLocation: =true
+                CurrentLocationLatitude: =Location.Latitude
+                CurrentLocationLongitude: =Location.Longitude
+                DefaultLatitude: =Location.Latitude
+                DefaultLongitude: =Location.Longitude
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                ItemsLatitudes: =Location.Latitude
+                ItemsLongitudes: =Location.Longitude
+                LayoutMinHeight: =400
+                LayoutMinWidth: =400
+                PinColor: =Color.DarkRed
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+    brnBarcode As button:
+        OnSelect: =Navigate(Barcode)
+        Text: ="barcode reader"
+        X: =15
+        Y: =216
+        ZIndex: =2
+

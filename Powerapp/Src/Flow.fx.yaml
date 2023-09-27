@@ -1,0 +1,46 @@
+"Flow As screen.'autoLayout_HeaderFooter_ver1.0'":
+
+    ScreenContainer5 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =Parent.Width
+        ZIndex: =1
+
+        txtMessage As text:
+            Default: ="Message"
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+        btnTriggerFlow As button:
+            OnSelect: =Triggerfromapp.Run(txtMessage.Text)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Text: ="Trigger flow"
+            ZIndex: =2
+
+        Button2 As button:
+            OnSelect: |-
+                =UpdateContext({
+                    locReturnValue:
+                    Returntosender.Run(txtMessage.Text).temperature}
+                )
+            Text: ="Button"
+            ZIndex: =3
+
+        Label2 As label:
+            Text: =varReturnValue
+            ZIndex: =4
+

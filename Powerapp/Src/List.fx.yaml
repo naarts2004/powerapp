@@ -1,0 +1,145 @@
+List As screen:
+
+    conMainGallery As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =3
+
+        txtSearch As text:
+            AlignInContainer: =AlignInContainer.Center
+            Default: =""
+            HintText: ="Zoeken"
+            Width: =Parent.Width/2
+            ZIndex: =1
+
+        layHeading As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =Color.MediumPurple
+            FillPortions: =0
+            Height: =40
+            LayoutMinHeight: =50
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =2
+
+            lblCode_2 As label:
+                FillPortions: =1
+                Text: ="Code"
+                ZIndex: =6
+
+            lblNaam_2 As label:
+                FillPortions: =1
+                Text: ="Naam"
+                ZIndex: =7
+
+            lblOmschrijving_2 As label:
+                FillPortions: =1
+                LayoutMinWidth: =600
+                Text: ="Omschrijving"
+                Width: =600
+                ZIndex: =8
+
+            lblAantal_2 As label:
+                Align: =Align.Right
+                FillPortions: =1
+                Text: ="Aantal"
+                ZIndex: =9
+
+            lblPrijs_2 As label:
+                Align: =Align.Right
+                FillPortions: =1
+                Text: ="Prijs"
+                ZIndex: =10
+
+            Label9 As label:
+                Text: ="Text"
+                ZIndex: =11
+
+        "galItems As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            DelayItemLoading: =true
+            Items: |
+                =
+                Search([
+                    {
+                      productcode: "P001",
+                      productnaam: "Laptop",
+                      omschrijving: "Krachtige 15-inch laptop met SSD-opslag",
+                      aantal: 10,
+                      prijs: 899.99
+                    },
+                    {
+                      productcode: "P002",
+                      productnaam: "Smartphone",
+                      omschrijving: "5.8-inch smartphone met dual-camera",
+                      aantal: 25,
+                      prijs: 599.95
+                    },
+                    {
+                      productcode: "P003",
+                      productnaam: "Koptelefoon",
+                      omschrijving: "Draadloze over-ear koptelefoon met ruisonderdrukking",
+                      aantal: 50,
+                      prijs: 149.50
+                    },
+                    {
+                      productcode: "P004",
+                      productnaam: "Bluetooth Speaker",
+                      omschrijving: "Draagbare bluetooth speaker met 20 uur batterijduur",
+                      aantal: 30,
+                      prijs: 79.99
+                    }
+                  ],txtSearch.Text,"productcode","omschrijving")
+                As orders
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =287
+            LayoutMinWidth: =320
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplatePadding: =0
+            TemplateSize: =50
+            Width: =Parent.Width
+            Y: =40
+            ZIndex: =3
+
+            Container4 As groupContainer.horizontalAutoLayoutContainer:
+                Height: =50
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                lblCode As label:
+                    FillPortions: =1
+                    Text: =orders.productcode
+                    ZIndex: =1
+
+                lblNaam As label:
+                    FillPortions: =1
+                    Text: =orders.productnaam
+                    ZIndex: =2
+
+                lblOmschrijving As label:
+                    FillPortions: =1
+                    LayoutMinWidth: =600
+                    Text: =orders.omschrijving
+                    Width: =600
+                    ZIndex: =3
+
+                lblAantal As label:
+                    Align: =Align.Right
+                    FillPortions: =1
+                    Text: =orders.aantal
+                    ZIndex: =4
+
+                lblPrijs As label:
+                    Align: =Align.Right
+                    FillPortions: =1
+                    Text: =orders.prijs
+                    ZIndex: =5
+
+                Label10 As label:
+                    Color: =If(orders.IsSelected, Color.Red, Color.Black)
+                    Text: =orders.IsSelected
+                    ZIndex: =6
+
